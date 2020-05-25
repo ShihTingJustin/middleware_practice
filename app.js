@@ -4,8 +4,8 @@ const port = 3000
 
 //middleware with no mount path and execute every request
 app.use((req, res, next) => {
-  let today = new Date()
-  console.log(`${today} | ${req.method} from ${req.originalUrl}`)
+  const today = new Date()
+  console.log(`${today.toLocaleString()} | ${req.method} from ${req.originalUrl}`)
 })
 
 app.get('/', (req, res) => {
